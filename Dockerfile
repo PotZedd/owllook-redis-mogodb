@@ -9,4 +9,3 @@ WORKDIR /owllook
 RUN pip install --no-cache-dir pipenv
 RUN pipenv install --skip-lock
 RUN find . -name "*.pyc" -delete
-CMD export MODE=DEV
