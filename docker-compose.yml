@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: howie6879/owllook
+    image: owllook
     command: pipenv run gunicorn -c owllook/config/gunicorn.py --worker-class sanic.worker.GunicornWorker owllook.server:app
     ports:
      - "8001:8001"
@@ -17,14 +17,12 @@ services:
     image: redis:6.0
     ports:
      - "6379:6379"
-    volumes:
-     - /opt/redis:/etc/redis/
     networks:
      - caddy
-    command: redis-server /etc/redis/redis.conf
+    command: redis-server
     
   mongo:
-    image: mongo:4.2
+    image: mongo:4.4
     ports:
      - "27017:27017"
     networks:
