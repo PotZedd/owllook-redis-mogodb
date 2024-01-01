@@ -7,3 +7,29 @@ services:
      - "8001:8001"
     volumes:
      - .:/owllook
+    networks:
+     - caddy
+    depends_on:
+     - redis
+     - mongo
+     
+  redis:
+    image: redis:6.0
+    ports:
+     - "6379:6379"
+    volumes:
+     - /opt/redis:/etc/redis/
+    networks:
+     - caddy
+    command: redis-server /etc/redis/redis.conf
+    
+  mongo:
+    image: mongo:3.6
+    networks:
+     - caddy
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+
+networks:
+  caddy:
