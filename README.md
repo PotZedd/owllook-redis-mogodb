@@ -1,15 +1,8 @@
-## owllook - 在线小说搜索引擎
+## owllook-redis-mogodb集群部署
 
  [![Python3.6+](https://img.shields.io/badge/python-3.6%2B-orange.svg)](https://github.com/howie6879/owllook) [![license](https://img.shields.io/github/license/howie6879/owllook.svg)](https://github.com/howie6879/owllook)
 
-`owllook`是一个基于其他搜索引擎构建的垂直小说搜索引擎，owllook目的是让阅读更简单、优雅，让每位读者都有舒适的阅读体验，如**搜书、阅读、收藏、追更、推荐等功能**：
-
-- ~~演示网址（不维护了，有兴趣自己搭建）~~：[https://www.owllook.net/](https://www.owllook.net/)
-- 公众号：[**粮草小说**](https://www.owllook.net/static/novels/img/lcxs_show.jpg)，有兴趣的话可以关注下
-- 详细安装介绍：[详细安装介绍](https://mp.weixin.qq.com/s/0CqLiKsyDQ-pVmeo3R-UlA)
-- 个人公众号：[老胡的储物柜](https://raw.githubusercontent.com/howie6879/howie6879.github.io/img/pictures/20190529083905.png)
-
-<div align=center><img src="https://img.turingark.com/wechat_howie.png"  width="85%" alt="img" /></div>
+`owllook`是一个基于其他搜索引擎构建的垂直小说搜索引擎，**本项目通过docker compose一键部署owllook-redis-mogodb**：
 
 衍生项目：
 
@@ -17,7 +10,7 @@
 - 小说监控工具：[owllook_gui](https://github.com/howie6879/owllook_gui)
 - 小说接口：[owllook_api](https://github.com/howie6879/owllook_api)
 
-**注意**：若将本项目部署并发行，请**声明来源**，本项目纯属**共享学习之用，不得用于商业！**
+**注意**：本项目**来源于howie6879/[owllook](https://github.com/howie6879/owllook)**，本项目纯属**共享学习之用，不得用于商业！**
 
 ### Overview
 
@@ -166,14 +159,3 @@ VAL_HOST = os.getenv('VAL_HOST', 'false')
 ### License
 
 `owllook` is offered under the Apache 2 license.
-
-### Donate
-
-**捐赠：**
-
-> 美酒加咖啡，我只要喝一杯～
-
-<img src="https://raw.githubusercontent.com/howie6879/howie6879.github.io/img/pictures/20190904201512.png" width = "400" height = "400" alt="donate" align=center />
-
-
-感谢以下捐赠者，具体见[捐赠名单](./DONATE.md) ^_^
