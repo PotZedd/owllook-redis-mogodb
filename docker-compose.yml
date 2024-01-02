@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    image: owllook
+    image: potzedd/owllook
     command: pipenv run gunicorn -c owllook/config/gunicorn.py --worker-class sanic.worker.GunicornWorker owllook.server:app
     ports:
      - "8001:8001"
