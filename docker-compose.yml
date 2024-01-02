@@ -14,7 +14,7 @@ services:
      - mongo
      
   redis:
-    image: redis:6.0
+    image: redis:3.0
     ports:
      - "6379:6379"
     networks:
@@ -22,7 +22,7 @@ services:
     command: redis-server
     
   mongo:
-    image: mongo:4.4
+    image: mongo:3.6
     ports:
      - "27017:27017"
     networks:
